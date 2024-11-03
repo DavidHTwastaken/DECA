@@ -1,5 +1,7 @@
 FROM pytorch/pytorch:1.6.0-cuda10.1-cudnn7-devel
 
+RUN rm /etc/apt/sources.list.d/cuda.list
+RUN rm /etc/apt/sources.list.d/nvidia-ml.list
 RUN apt-get update && apt-get install -y wget curl git build-essential
 
 # Miniconda
